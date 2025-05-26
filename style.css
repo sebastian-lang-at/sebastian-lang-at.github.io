@@ -1,0 +1,33 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 3.5vw;
+    letter-spacing: -0.03em;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.small-text {
+    font-size: clamp(0.8rem, 0.94vw, 0.9rem);
+    color: #000000;
+    letter-spacing: -0.02em;
+}
+
+.text-indent {
+    text-indent: 2em;
+}
+
+.raum157-logo {
+    font-size: 2.5rem;
+    line-height: 50px;
+    color: #000000;
+    text-decoration: none;
+}
