@@ -4,20 +4,47 @@ body {
 
 .title {
     font-weight: 400;
-    font-size: 8.0vw;
+    font-size: clamp(2.4rem, 8vw, 6.2rem); /* bigger overall, but capped */
     letter-spacing: -0.03em;
+    line-height: 0.95;
+}
+
+.container {
+    max-width: 1180px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+/* very small gap between image and text */
+.row.mb-3 {
+    --bs-gutter-x: 0.2rem;
+}
+
+/* desktop: make left column hug image width */
+@media (min-width: 768px) {
+    .row.mb-3 > .col-12.col-md-7 {
+        flex: 0 0 590px;
+        max-width: 590px;
+    }
+
+    .row.mb-3 > .col-12.col-md-5 {
+        flex: 1 1 0;
+        max-width: none;
+    }
 }
 
 .image-wrapper {
-    max-width: min(100%, 520px);
-    margin: 0 auto;
+    width: min(100%, 590px);
+    margin: 0; /* instead of 0 auto */
 }
 
 .image-wrapper img {
     width: 100%;
     height: auto;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
+    object-fit: contain;   /* or remove object-fit entirely */
+    aspect-ratio: auto;    /* or remove this line */
 }
 
 .small-text {
