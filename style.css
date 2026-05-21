@@ -4,8 +4,13 @@ body {
 
 .title {
     font-weight: 400;
-    font-size: 3.5vw;
+    font-size: 10.0vw;
     letter-spacing: -0.03em;
+}
+
+.image-wrapper {
+    max-width: min(100%, 520px);
+    margin: 0 auto;
 }
 
 .image-wrapper img {
